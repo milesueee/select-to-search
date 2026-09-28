@@ -1,0 +1,22 @@
+# Extension signing key and builds
+*.pem
+*.crx
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors and IDEs
+.vscode/
+.webstorm/
+.claude/
+.gemini/
+.codex/
+.idea/
+*.swp
+
+# Logs and dependencies
+*.log
+node_modules/
