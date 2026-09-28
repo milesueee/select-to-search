@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "select-to-search",
+  "version": "1.0.0",
+  "description": "Press a shortcut to search or open whatever text you have highlighted.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "commands": {
+    "search-selection": {
+      "suggested_key": {
+        "default": "Alt+G"
+      },
+      "description": "Search Google for the highlighted text"
+    }
+  }
+}
